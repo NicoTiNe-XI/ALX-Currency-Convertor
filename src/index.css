@@ -1,0 +1,151 @@
+/* Global Css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import 'react-widgets/styles.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header {
+  width: 100%;
+  padding-bottom: 150px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container .logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.alx-currency-convertor {
+  font-size: 36px;
+  background-image: linear-gradient(
+    to right,
+    #038eca,
+    #276fc2,
+    #4a52ba,
+    #734aa4,
+    #994c8b,
+    #e2515a
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 520px) {
+  .alx-currency-convertor {
+    font-size: 22px;
+  }
+}
+
+.currency-convertor-form {
+  padding: 2rem 1.5rem;
+  max-width: 30rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.input-group .exchange-row {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+label {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #03a9f4;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #03a9f4;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+input {
+  flex-grow: 1;
+}
+
+select {
+  flex-shrink: 3;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 420px) {
+  .input-group .exchange-row  {
+    flex-direction: column;
+  }
+}
